@@ -9,6 +9,7 @@ module.exports = {
     siteMetadata: {
         title: `GatsbyBlog`,
         description: `My first individual project on Gatsby`,
+        author: `ipon`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -71,8 +72,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `BluePes`,
-                short_name: `BluePes`,
+                name: `First`,
+                short_name: `First`,
                 start_url: `/`,
                 background_color: `#FFFFFF`,
                 theme_color: `#FFFFFF`,

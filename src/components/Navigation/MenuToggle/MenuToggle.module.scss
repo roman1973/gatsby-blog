@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+
+.MenuToggle {
+  position: absolute;
+  top: 22px;
+  right: 18px;
+  display: block;
+  width: 24px;
+  cursor: pointer;
+  z-index: 100 !important;
+
+  .Times {
+    height: 18px;
+    @include flex(column, center);
+
+    &:hover > div {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:active > div {
+      background-color: #FFFFFF;
+    }
+
+    .MenuToggleRectangle {
+      background-color: #FFFFFF;
+      height: 2px;
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        transform: translate(0, -2px) rotate(-45deg);
+      }
+    }
+  }
+
+  .Bars {
+    height: 18px;
+    @include flex(column, space-between);
+
+    &:hover > div {
+      background-color: #469DDB
+    }
+
+    &:active > div {
+      background-color: #1E75B3;
+    }
+
+    .MenuToggleRectangle {
+      height: 2px;
+      background-color: $strong-blue;
+    }
+  }
+}

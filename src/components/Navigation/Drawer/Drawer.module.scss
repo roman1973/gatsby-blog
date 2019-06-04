@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixins";
+
+.Drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 76vw;
+  padding-top: 100px;
+  padding-left: 23px;
+  overflow: auto;
+  background: $strong-blue;
+  transform: translateX(0px);
+  transition: transform .22s ease-in;
+  z-index: 30;
+
+  &.Close {
+    transform: translateX(80vw);
+  }
+
+  ul {
+    li {
+      display: table;
+      border-bottom: 2px solid transparent;
+      margin-bottom: 36px;
+
+      &:hover {
+        cursor: pointer;
+
+        a {
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
+
+      a {
+        @include lato(20px, 30px, rgba(255, 255, 255, 0.7));
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .Drawer {
+    display: none;
+  }
+}

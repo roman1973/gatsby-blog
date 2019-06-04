@@ -1,0 +1,261 @@
+/* ======================================================== 
+    Footer styles
+=========================================================== */
+
+.footer {
+  @include flex(row);
+  height: 200px;
+  width: 100%;
+  background: url("../assets/images/landscape.jpg"), url("../assets/images/landscape1.jpg"),
+  url("../assets/images/landscape2.jpg"),url("../assets/images/landscape3.jpg"),
+  url("../assets/images/landscape4.jpg"), url("../assets/images/landscape5.jpg"),
+  url("../assets/images/landscape6.jpg");
+  background-position: 100%;
+  background-size: 70% 200px, 70% 200px, 70% 200px, 70% 200px, 70% 200px, 100% 200px;
+  background-repeat: no-repeat;
+  animation: landview 20s linear infinite;
+
+
+  &:hover {
+    animation: none;
+    .footer-wrapper {
+      .logo-wrapper-head {
+        .logo {
+          img {
+            animation: none;
+          }
+        }
+      }
+
+      .logo-wrapper-back {
+        .logo {
+          img {
+            animation: none;
+          }
+        }
+      }
+    }
+  }
+
+
+  .footer-wrapper {
+    flex-basis: 50%;
+    margin: 100px auto 0;
+
+    background-color: rgba(195,142,255,0.96);
+    padding: 0 30px;
+    @include flex(row, space-between, center);
+    height: 40px;
+
+    .logo-wrapper-head {
+
+      .logo {
+
+        width: 70px;
+        color: #FFFFFF;
+        cursor: pointer;
+        img {
+          width: 100%;
+          border-radius: 50%;
+          animation: rotate 1s linear infinite;
+        }
+      }
+    }
+
+    .logo-wrapper-back {
+      .logo {
+          width: 90px;
+          color: #FFFFFF;
+          cursor: pointer;
+          img {
+            border-radius: 50%;
+            width: 100%;
+            animation: rotate 1s linear infinite;
+          }
+        }
+      }
+
+    .copyright {
+      @include lato(14px, 14px, #ffffff, normal);
+      margin: 0 30px;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .footer {
+    padding: 0 48px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .footer {
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .footer {
+    .footer-wrapper {
+      .logo-wrapper {
+        width: 77px;
+
+        .logo {
+          width: 68px;
+        }
+      }
+
+      ul {
+        width: 77px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .footer {
+    .footer-wrapper {
+      flex-wrap: wrap;
+      height: 107px;
+
+      .logo-wrapper {
+        width: 62px;
+      }
+
+      ul {
+        width: 62px;
+      }
+
+      .copyright {
+        flex-grow: 1;
+        order: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .footer {
+    .footer-wrapper {
+      .copyright {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  25% {
+    background-color: blueviolet;
+
+    width: 108%;
+  }
+  50% {
+
+    background-color: #FF0000;
+    width: 112%;
+  }
+
+  75% {
+    background-color: brown;
+    width: 110%;
+
+  }
+
+  100% {
+
+    background-color: darkslateblue;
+    width: 100%;
+  }
+}
+
+@keyframes landview {
+  0% {
+    background-position: 50%,100%,100%,100%,100%;
+  }
+  5% {
+    background-position: 0%, 100%, 100%, 100%, 100%;
+  }
+  10% {
+
+    background-position: -50%, 100%, 100%, 100%, 100%;
+  }
+
+  15% {
+    background-position: -100%, 100%, 100%, 100%, 100%;
+
+  }
+
+  20% {
+    background-position: -150%, 50%, 100%, 100%, 100%;
+  }
+
+  25% {
+    background-position: -200%, 0%, 100%, 100%, 100%;
+  }
+
+  30% {
+    background-position: -250%, -50%, 100%, 100%, 100%;
+  }
+
+  35% {
+    background-position: -300%, -100%, 100%, 100%, 100%;
+  }
+
+  40% {
+    background-position: -300%, -150%, 50%, 100%, 100%;
+  }
+
+  45% {
+    background-position: -300%, -200%, 0%, 100%, 100%;
+  }
+
+  50% {
+    background-position: -300%, -250%, -50%, 100%, 100%;
+  }
+
+  55% {
+    background-position: -300%, -300%, -100%, 100%, 100%;
+  }
+
+  60% {
+    background-position: -300%, -300%, -150%, 50%, 100%;
+  }
+
+  65% {
+    background-position: -300%, -300%, -200%, 0%, 100%;
+  }
+
+  70% {
+    background-position: -300%, -300%, -250%, -50%, 100%;
+  }
+
+  75% {
+    background-position: -300%, -300%, -300%, -100%, 100%, 100%;
+  }
+
+  80% {
+    background-position: -300%, -300%, -300%, -150%, 50%, 100%;
+  }
+
+  85% {
+    background-position: -300%, -300%, -300%, -200%, 0%, 100%;
+  }
+
+  90% {
+    background-position: -300%, -300%, -300%, -250%, -50%, 100%;
+  }
+
+  95% {
+    background-position: -300%, -300%, -300%, -300%, -100%, 100%;
+  }
+
+  100% {
+    background-position: -300%, -300%, -300%, -300%, -150%, 100%;
+  }
+}

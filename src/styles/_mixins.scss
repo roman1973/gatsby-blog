@@ -1,0 +1,28 @@
+/* ======================================================== 
+    Mixins
+=========================================================== */
+
+/* mixin for flex */
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* mixin for lato font-family */
+@mixin lato($font-size, $line-height, $color: $strong-blue, $font-weight: 900) {
+  font-family: $lato-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $font-weight;
+}
+
+/* mixin for PT font-family */
+@mixin PT($font-size, $line-height, $color: $dark-gray) {
+  font-family: $PT-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}

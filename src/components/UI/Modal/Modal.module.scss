@@ -1,0 +1,64 @@
+@import "variables";
+@import "mixins";
+
+.Modal {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 0 36px 0 ;
+  z-index: 1000;
+  display: none;
+  position: absolute;
+  max-width: 464px;
+  height: 145px;
+  left: 0;
+  right: 0;
+  top: 37%;
+  background: #FFFFFF;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.342816);
+
+  &.Open {
+    @include flex(column, flex-start, center);
+  }
+
+  &.Close {
+    display: none;
+  }
+  span {
+    @include PT(14px, 14px);
+    margin-bottom: 24px;
+  }
+
+  &.Success {
+    span {
+      color: $dark-gray;
+    }
+  }
+
+  &.Error {
+    span {
+      color: #FF4040;
+    }
+  }
+
+  button {
+    width: 112px;
+    height: 46px;
+    background: $strong-blue;
+    @include lato(14px, 19px, #FFFFFF);
+    letter-spacing: 0.7px;
+
+    &:hover {
+      background: #469DDB;
+    }
+
+    &:active {
+      background: #1E75B3;
+    }
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .Modal {
+    top: 59%;
+  }
+}

@@ -1,0 +1,283 @@
+/* ======================================================== 
+    Main styles
+=========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  margin: 0 auto;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a, a:visited, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+input, textarea {
+  border-radius: 0;
+}
+
+blockquote {
+  margin: 20px 40px;
+
+  p::before {
+    content: '\201C';
+  }
+
+  p::after {
+    content: '\201D';
+  }
+}
+
+ul li#not-clickable {
+  &:hover {
+    cursor: default;
+
+    a {
+      color: #424242;
+    }
+  }
+}
+
+ul li#not-clickable-mobile {
+  &:hover {
+    cursor: default;
+
+    a {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+/* ======================================================== 
+    Browser scroll styles
+=========================================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  width: 2px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: rgba(41, 137, 198, 1); // thumb color
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.05), inset 0 0 0 rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0); // thumb width
+}
+
+/* ======================================================== 
+    Сommon styles for certain items
+=========================================================== */
+
+// general site wrapper
+.wrapper {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+// position image inside article
+.gatsby-resp-image-link {
+  display: block;
+  margin: 28px 0;
+
+  span {
+    max-width: 100% !important;
+  }
+}
+
+// style types of list inside article
+.list-style {
+  ul {
+    margin: 10px 30px;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  ol {
+    margin: 10px 30px;
+
+    li {
+      list-style-type: decimal;
+    }
+  }
+}
+
+// section landing page title
+.section-header {
+  @include lato(40px, 40px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 84px;
+}
+
+// general pages background image posititon
+.general-page-background {
+  margin-top: 91px;
+  height: 773px;
+}
+
+// general pages header content
+.general-page-header {
+  padding: 0 96px;
+  box-sizing: content-box;
+  
+  .general-page-title {
+    @include lato(65px, 91px);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding-top: 80px;
+  }
+
+  .general-page-description {
+    @include lato(28px, 38px, $dark-gray, 500);
+    max-width: 457px;
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .wrapper {
+    max-width: 1120px;
+  }
+
+  .gatsby-resp-image-link {
+    margin: 20px 0;
+  }
+
+  .section-header {
+    line-height: 30px;
+    font-size: 30px;
+  }
+
+  .general-page-background {
+    height: 582px;
+  }
+
+  .general-page-header {
+    padding: 0 72px;
+    
+    .general-page-title {
+      font-size: 50px;
+      line-height: 70px;
+      padding-top: 52px;
+    }
+  
+    .general-page-description {
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 348px;
+      padding-top: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .section-header {
+    padding-top: 67px;
+  }
+
+  .general-page-background {
+    height: 414px;
+  }
+
+  .general-page-header {
+    padding: 0 48px;
+    
+    .general-page-title {
+      font-size: 42px;
+      line-height: 58px;
+      padding-top: 38px;
+    }
+  
+    .general-page-description {
+      font-size: 20px;
+      line-height: 30px;
+      max-width: 288px;
+      padding-top: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-header {
+    padding-top: 36px;
+  }
+
+  .general-page-background {
+    margin-top: 76px;
+    height: 235px;
+  }
+
+  .general-page-header {
+    padding: 0 16px;
+    
+    .general-page-title {
+      font-size: 38px;
+      line-height: 50px;
+      padding-top: 32px;
+    }
+  
+    .general-page-description {
+      font-size: 18px;
+      line-height: 26px;
+      padding-top: 12px;
+      width: 256px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .general-page-background {
+    height: 210px;
+  }
+
+  .general-page-header {
+    .general-page-title {
+      padding-top: 28px;
+    }
+  
+    .general-page-description {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 224px;
+      padding-top: 7px;
+    }
+  }
+}
