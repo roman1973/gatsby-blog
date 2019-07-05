@@ -281,3 +281,10 @@ textarea::-webkit-scrollbar-thumb {
     }
   }
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+
+  }
+}

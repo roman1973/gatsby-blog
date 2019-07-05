@@ -1,0 +1,42 @@
+
+  .main {
+    height: 1000px;
+    width: 1400px;
+    margin: 300px auto 0;
+    --h:0;
+    .block1 {
+      max-width: 500px;
+      //height: var(--h);
+      margin: 0 auto;
+      background-color: #2989C6;
+      //display: table-cell;
+      //vertical-align:middle;
+
+
+
+      .block1-1 {
+        position: relative;
+        margin: 0 auto;
+        max-width: 200px;
+
+        background-color: #FF0000;
+        font-size: 25px;
+        line-height: 30px;
+        --h: calc(100%/30);
+        //height: var(--h);
+
+        &:after {
+          height: var(--h);
+          width: 10px;
+          position: absolute;
+          bottom: -50px;
+          content: '';
+          background-color: green;
+
+        }
+
+      }
+    }
+
+  }
+

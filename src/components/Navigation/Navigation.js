@@ -67,18 +67,10 @@ class Navigation extends Component {
               <li>
                 <Link
                   activeClassName="active"
-                  to="/services/">
-                  Services
+                  to="/">
+                  home
                 </Link>
               </li>
-              <li>
-                <Link
-                  activeClassName="active"
-                  to="/industries/">
-                  Industries
-                </Link>
-              </li>
-              <li id="not-clickable"><a>Technologies</a></li>
               <li>
                 <Link
                   activeClassName="active"
@@ -86,7 +78,13 @@ class Navigation extends Component {
                   Blog
                 </Link>
               </li>
-              <li id="not-clickable"><a>Contact us</a></li>
+              <li>
+                <Link
+                  activeClassName="active"
+                  to="/">
+                  about
+                </Link>
+              </li>
             </ul>
           </div>
           <MenuToggle
