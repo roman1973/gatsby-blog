@@ -16,6 +16,16 @@
     top: -91px;
   }
 
+  &:hover {
+    .navigation-wrapper {
+      .logo {
+        img {
+          animation: rotate 1s linear infinite, rotatemove 3s linear;
+        }
+      }
+    }
+  }
+
   figure {
     display: none;
   }
@@ -24,7 +34,8 @@
     .logo {
       float: left;
       width: 200px;
-       cursor: pointer;
+      cursor: pointer;
+
       img {
         width: 100%;
       }
@@ -116,5 +127,37 @@
         display: none;
       }
     }
+  }
+}
+
+
+
+@keyframes rotatemove {
+  0% {
+    width: 100%;
+    transform: translate(10px, 10px);
+  }
+
+  25% {
+    width: 75%;
+    transform: translate(300px, 15px);
+  }
+
+  50% {
+    width: 50%;
+    transform: translate(500px, 20px);
+
+  }
+
+  75% {
+    width: 25%;
+    transform: translate(800px, 25px);
+
+  }
+
+  100% {
+    width: 0%;
+    transform: translate(1100px, 30px);
+
   }
 }

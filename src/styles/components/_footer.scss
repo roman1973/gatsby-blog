@@ -48,16 +48,14 @@
     height: 40px;
 
     .logo-wrapper-head {
-
       .logo {
-
         width: 70px;
         color: #FFFFFF;
         cursor: pointer;
         img {
           width: 100%;
           border-radius: 50%;
-          animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite, rotatefooter 1s linear infinite;
         }
       }
     }
@@ -70,7 +68,7 @@
           img {
             border-radius: 50%;
             width: 100%;
-            animation: rotate 1s linear infinite;
+            animation: rotate 1s linear infinite, rotatefooter 1s linear infinite;
           }
         }
       }
@@ -146,30 +144,23 @@
 }
 
 
-@keyframes rotate {
+@keyframes rotatefooter {
   0% {
-    transform: rotate(360deg);
+
   }
   25% {
-    background-color: blueviolet;
-
     width: 108%;
   }
-  50% {
 
-    background-color: #FF0000;
+  50% {
     width: 112%;
   }
 
   75% {
-    background-color: brown;
     width: 110%;
-
   }
 
   100% {
-
-    background-color: darkslateblue;
     width: 100%;
   }
 }
