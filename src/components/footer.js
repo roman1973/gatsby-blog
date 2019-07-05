@@ -10,7 +10,7 @@ const Footer = () => (
         <Logo img={logoImg} />
       </div>
       <div className="copyright">
-        <span>Copyright © 2019 FIRST. All rights reserved.</span>
+        <span>Copyright © 2018 FIRST. All rights reserved.</span>
       </div>
       <div className="logo-wrapper-back">
         <Logo img={logoImg} />
