@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     <SEO
       title="First - test-task"
-      keywords={[`First`, `company`, `learn`, `IT`]} />
+      keywords={[`First`, `company`, `learn`, `Ir`]} />
     <TopIndex/>
   </Layout>
 )
