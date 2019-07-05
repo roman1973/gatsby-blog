@@ -8,8 +8,6 @@ const IndexPage = () => (
     <SEO
       title="First - test-task"
       keywords={[`First`, `company`, `learn`, `IT`]} />
-    <div style={{ width: '100%', height: '88vh' }}/>
-
   </Layout>
 )
 
